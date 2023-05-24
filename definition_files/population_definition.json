@@ -1,0 +1,178 @@
+{"fields":{
+	"core":[
+		{"header":"Population","type":"Integer"},
+		{"header":"Male_Population","type":"Integer"},
+		{"header":"Female_Population","type":"Integer"}
+	],
+	"country-specific":[
+		{"country":"AFG",
+		 "include":[
+			{"header":" M_00_04 ","type":"Integer"},
+			{"header":" T_00_04 ","type":"Integer"},
+			{"header":" F_05_09 ","type":"Integer"},
+			{"header":" M_05_09 ","type":"Integer"},
+			{"header":" T_05_09 ","type":"Integer"},
+			{"header":" F_10_14 ","type":"Integer"},
+			{"header":" M_10_14 ","type":"Integer"},
+			{"header":" T_10_14 ","type":"Integer"},
+			{"header":" F_15_19 ","type":"Integer"},
+			{"header":" M_15_19 ","type":"Integer"},
+			{"header":" T_15_19 ","type":"Integer"},
+			{"header":" F_20_24 ","type":"Integer"},
+			{"header":" M_20_24 ","type":"Integer"},
+			{"header":" T_20_24 ","type":"Integer"},
+			{"header":" F_25_29 ","type":"Integer"},
+			{"header":" M_25_29 ","type":"Integer"},
+			{"header":" T_25_29 ","type":"Integer"},
+			{"header":" F_30_34 ","type":"Integer"},
+			{"header":" M_30_34 ","type":"Integer"},
+			{"header":" T_30_34 ","type":"Integer"},
+			{"header":" F_35_39 ","type":"Integer"},
+			{"header":" M_35_39 ","type":"Integer"},
+			{"header":" T_35_39 ","type":"Integer"},
+			{"header":" F_40_44 ","type":"Integer"},
+			{"header":" M_40_44 ","type":"Integer"},
+			{"header":" T_40_44 ","type":"Integer"},
+			{"header":" F_45_49 ","type":"Integer"},
+			{"header":" M_45_49 ","type":"Integer"},
+			{"header":" T_45_49 ","type":"Integer"},
+			{"header":" F_50_54 ","type":"Integer"},
+			{"header":" M_50_54 ","type":"Integer"},
+			{"header":" T_50_54 ","type":"Integer"},
+			{"header":" F_55_59 ","type":"Integer"},
+			{"header":" M_55_59 ","type":"Integer"},
+			{"header":" T_55_59 ","type":"Integer"},
+			{"header":" F_60_64 ","type":"Integer"},
+			{"header":" M_60_64 ","type":"Integer"},
+			{"header":" T_60_64 ","type":"Integer"},
+			{"header":" F_65_69 ","type":"Integer"},
+			{"header":" M_65_69 ","type":"Integer"},
+			{"header":" T_65_69 ","type":"Integer"},
+			{"header":" F_70_74 ","type":"Integer"},
+			{"header":" M_70_74 ","type":"Integer"},
+			{"header":" T_70_74 ","type":"Integer"},
+			{"header":" F_75_79 ","type":"Integer"},
+			{"header":" M_75_79 ","type":"Integer"},
+			{"header":" T_75_79 ","type":"Integer"},
+			{"header":" F_80plus ","type":"Integer"},
+			{"header":" M_80plus ","type":"Integer"},
+			{"header":" T_80plus ","type":"Integer"}		 	
+		 ],
+		 "transformations":[
+		 	{
+		 		"resource":"https://data.humdata.org/dataset/17acb541-9431-409a-80a8-50eda7e8ebab/resource/dc7a5656-d557-404f-8b1d-494c7bbd0112/download/afg_admpop_adm1_2021_v2.csv",
+		 		"headerRow":1,
+		 		"dataRow":3,
+		 		"mappings":[
+		 			["Admin1_Name","Admin1_Name"],
+		 			["Admin1_Code","Admin1_Code"],
+		 			[" T_TL ","Population"],
+		 			[" F_TL ","Female_Population"],
+		 			[" M_TL ","Male_Population"]
+		 		],
+		 		"fixedCols":[
+		 			{"key":"Admin0_Code_ISO3","value":"AFG"},
+		 			{"key":"Record_Source","value":"AFG_Population"},
+		 			{"key":"Indicator","value":"population"}
+		 		]
+		 	}
+		 ],
+		 "dataset":"cod-ps-afg"
+		},
+		{"country":"SOM",
+		 "include":[
+	 		
+		 ],
+		 "transformations":[
+		 	{
+		 		"resource":"https://data.humdata.org/dataset/6cac9c64-2716-4809-9e82-440839d421f6/resource/ba86a46c-f922-4f8f-a213-ad9dbd5154c8/download/som_pplp_adm1_v2.csv",
+		 		"headerRow":1,
+		 		"dataRow":2,
+		 		"mappings":[
+		 			["admin1Name_en","Admin1_Name"],
+		 			["admin1Pcode","Admin1_Code"],
+		 			["T_TL","Population"]
+		 		],
+		 		"fixedCols":[
+		 			{"key":"Admin0_Code_ISO3","value":"SOM"},
+		 			{"key":"Record_Source","value":"SOM_Population"},
+		 			{"key":"Indicator","value":"population"}
+		 		]
+		 	},
+		 	{
+		 		"resource":"https://data.humdata.org/dataset/6cac9c64-2716-4809-9e82-440839d421f6/resource/a63d9729-c8fa-4456-a3fd-11034dd2117b/download/som_pplp_adm2_v2.csv",
+		 		"headerRow":1,
+		 		"dataRow":2,
+		 		"mappings":[
+		 			["admin1Name_en","Admin1_Name"],
+		 			["admin1Pcode","Admin1_Code"],
+		 			["admin2Pcode","Admin2_Code"],
+		 			["Admin2Name_en","Admin2_Name"],
+		 			["T_TL","Population"]
+		 		],
+		 		"fixedCols":[
+		 			{"key":"Admin0_Code_ISO3","value":"SOM"},
+		 			{"key":"Record_Source","value":"SOM_Population"},
+		 			{"key":"Indicator","value":"population"}
+		 		]
+		 	}
+		 ],
+		 "dataset":""
+		},
+		{"country":"SSD",
+		 "include":[
+		 	{"header":"F_00_04","type":"Integer"},
+		 	{"header":"F_05_17","type":"Integer"},
+		 	{"header":"F_18_60","type":"Integer"},
+		 	{"header":"F_61plus","type":"Integer"},
+		 	{"header":"M_00_04","type":"Integer"},
+		 	{"header":"M_05_17","type":"Integer"},
+		 	{"header":"M_18_60","type":"Integer"},
+		 	{"header":"M_61plus","type":"Integer"},
+		 	{"header":"T_00_04","type":"Integer"},
+		 	{"header":"T_05_17","type":"Integer"},
+		 	{"header":"T_18_60","type":"Integer"},
+		 	{"header":"T_61plus","type":"Integer"}									
+		 ],
+		 "transformations":[
+		 	{
+		 		"resource":"https://data.humdata.org/dataset/5116cb9f-5db8-4f56-9766-735d88dcbbfa/resource/7a5243b5-9b54-4453-a30e-044e79417e1f/download/ssd_admpop_adm1_2022_v2.csv",
+		 		"headerRow":1,
+		 		"dataRow":2,
+		 		"mappings":[
+		 			["ADM1_EN","Admin1_Name"],
+		 			["ADM1_PCODE","Admin1_Code"],
+		 			["T_TL","Population"],
+		 			["F_TL","Female_Population"],
+		 			["M_TL","Male_Population"]
+		 		],
+		 		"fixedCols":[
+		 			{"key":"Admin0_Code_ISO3","value":"SSD"},
+		 			{"key":"Record_Source","value":"SOM_Population"},
+		 			{"key":"Indicator","value":"population"}
+		 		]
+		 	},
+		 	{
+		 		"resource":"https://data.humdata.org/dataset/5116cb9f-5db8-4f56-9766-735d88dcbbfa/resource/209b6acb-99d0-4055-878e-e1a68618abe1/download/ssd_admpop_adm2_2022_v2.csv",
+		 		"headerRow":1,
+		 		"dataRow":2,
+		 		"mappings":[
+		 			["ADM1_EN","Admin1_Name"],
+		 			["ADM1_PCODE","Admin1_Code"],
+		 			["ADM2_EN","Admin2_Name"],
+		 			["ADM2_PCODE","Admin2_Code"],
+		 			["T_TL","Population"],
+		 			["F_TL","Female_Population"],
+		 			["M_TL","Male_Population"]
+		 		],
+		 		"fixedCols":[
+		 			{"key":"Admin0_Code_ISO3","value":"SSD"},
+		 			{"key":"Record_Source","value":"SOM_Population"},
+		 			{"key":"Indicator","value":"population"}
+		 		]
+		 	}
+		 ],
+		 "dataset":""
+		}
+	]}
+}

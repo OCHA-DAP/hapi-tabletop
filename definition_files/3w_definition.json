@@ -1,0 +1,93 @@
+{"fields":{
+	"core":[
+		{"header":"Org","type":"Char(255)"},
+		{"header":"Sector","type":"Char(255)"}
+	],
+	"country-specific":[
+		{"country":"AFG",
+		 "include":[
+			{"header":"Org_Type","type":"Char(255)"},
+			{"header":"Org_Acronym","type":"Char(255)"}	
+		 ],
+		 "transformations":[
+		 	{
+		 		"resource":"https://data.humdata.org/dataset/f50bc211-d42f-4fcd-8291-3e4a57a0dfcf/resource/1d28eb8a-5585-4694-ba2f-766212a2f5ae/download/afghanistan-3w-operational-presence-january-march-2023.csv",
+		 		"headerRow":1,
+		 		"dataRow":3,
+		 		"mappings":[
+		 			["PROVINCE","Admin1_Name"],
+		 			["PROV_CODE","Admin1_Code"],
+		 			["DISTRICT","Admin2_Name"],
+		 			["DIST_CODE","Admin2_Code"],
+		 			["ORG_ACRONYM","Org_Acronym"],
+		 			["ORG_TYPE","Org_Type"],
+		 			["ORG_NAME","Org"],
+		 			["CLUSTER_SECTOR_NAME","Sector"]
+		 		],
+		 		"fixedCols":[
+		 			{"key":"Admin0_Code_ISO3","value":"AFG"},
+		 			{"key":"Record_Source","value":"AFG_3W"},
+		 			{"key":"Indicator","value":"3w"}
+		 		]
+		 	}
+		 ],
+		 "dataset":"afghanistan-who-does-what-where-january-to-march-2023"
+		},
+		{"country":"SOM",
+		 "include":[
+	 		{"header":"Org_Type","type":"Char(255)"},
+	 		{"header":"Org_Acronym","type":"Char(255)"}
+		 ],
+		 "transformations":[
+		 	{
+		 		"resource":"https://proxy.hxlstandard.org/data.csv?dest=data_view&url=https%3A%2F%2Fdata.humdata.org%2Fdataset%2F8dfc1407-8165-44f2-93c3-f294172ce6c6%2Fresource%2F10a1749b-1484-496e-b505-b6a34a40ec4a%2Fdownload%2Focha_som_operational_presence_3w_data_oct2022.xlsx",
+		 		"headerRow":1,
+		 		"dataRow":3,
+		 		"mappings":[
+		 			["Cluster ","Sector"],
+		 			["Org. Name","Org"],
+		 			["Org. Acronym","Org_Acronym"],
+		 			["Region ","Admin1_Name"],
+		 			["District ","Admin2_Name"]
+		 		],
+		 		"fixedCols":[
+		 			{"key":"Admin0_Code_ISO3","value":"SOM"},
+		 			{"key":"Record_Source","value":"SOM_3W"},
+		 			{"key":"Indicator","value":"3w"}
+		 		]
+		 	}
+		 ],
+		 "dataset":"somalia-who-is-doing-what-and-where-3w-october-2022"
+		},
+		{"country":"SSD",
+		 "include":[
+	 		{"header":"Org_Type","type":"Char(255)"},
+	 		{"header":"Org_Acronym","type":"Char(255)"},
+			{"header":"Reporting_or_Implementing_Org","type":"Char(255)"}
+	 		
+		 ],
+		 "transformations":[
+		 	{
+		 		"resource":"https://proxy.hxlstandard.org/data.csv?tagger-match-all=on&tagger-01-header=organization&tagger-01-tag=%23org%2Bacronym&tagger-02-header=organization+name&tagger-02-tag=%23org%2Bname&tagger-03-header=organization+type&tagger-03-tag=%23org%2Btype&tagger-04-header=sector&tagger-04-tag=%23sector&tagger-05-header=state&tagger-05-tag=%23adm1&tagger-06-header=county&tagger-06-tag=%23adm2&tagger-09-header=reporting+or+implementing&tagger-09-tag=%23org%2Btype2&url=https%3A%2F%2Fdata.humdata.org%2Fdataset%2F531fe931-4b87-43e9-ae4c-a3e25a2bd388%2Fresource%2F8fda9d24-537a-4bf6-953d-e362449bac4c%2Fdownload%2Fss_20230511_3w_op_january-to-march_2023.xlsx&header-row=1&dest=data_view",
+		 		"headerRow":1,
+		 		"dataRow":3,
+		 		"mappings":[
+		 			["Cluster ","Sector"],
+		 			["Organization name","Org"],
+		 			["Organization","Org_Acronym"],
+		 			["State","Admin1_Name"],
+		 			["County","Admin2_Name"],
+		 			["Organization Type","Org_Type"],
+		 			["Reporting or Implementing","Reporting_or_Implementing_Org"]
+		 		],
+		 		"fixedCols":[
+		 			{"key":"Admin0_Code_ISO3","value":"SSD"},
+		 			{"key":"Record_Source","value":"SSD_3W"},
+		 			{"key":"Indicator","value":"3w"}
+		 		]
+		 	}
+		 ],
+		 "dataset":"somalia-who-is-doing-what-and-where-3w-october-2022"
+		}
+	]}
+}
