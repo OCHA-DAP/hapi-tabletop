@@ -12,6 +12,6 @@
 	{"header":"Lng","type":"float"},
 	{"header":"Record_ID","type":"integer"},
 	{"header":"Record_Source","type":"char(20)"},
-	{"header":"Theme","type":"char(20)"}
+	{"header":"Indicator","type":"char(20)"}
 ]}
 
