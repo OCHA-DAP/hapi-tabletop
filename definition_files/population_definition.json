@@ -148,7 +148,7 @@
 		 		],
 		 		"fixedCols":[
 		 			{"key":"Admin0_Code_ISO3","value":"SSD"},
-		 			{"key":"Record_Source","value":"SOM_Population1"},
+		 			{"key":"Record_Source","value":"SSD_Population1"},
 		 			{"key":"Indicator","value":"population"}
 		 		]
 		 	},
