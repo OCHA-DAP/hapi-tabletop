@@ -1,4 +1,7 @@
 # hapi-tabletop
 
 ## Indicator configuration files
-[Definition files](definition_files)
+[/definition_files](definition_files)
+
+## Transformation Scripts
+[/scripts](/scripts)
