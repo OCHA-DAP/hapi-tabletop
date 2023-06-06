@@ -4,7 +4,7 @@
 
 To run create a virtual env and run:
 ```
-pip install -r
+pip install -r requirements.txt
 ```
 
 Migrate database

@@ -1,12 +1,10 @@
-from django.shortcuts import render
-import sys
-sys.path.insert(1, 'scripts/')
-import transform
-import longToWide
-from django.http import HttpResponse, JsonResponse
-from main.models import indicator
-from django.core.serializers import serialize
 import csv
+
+from django.shortcuts import render
+from django.http import HttpResponse, JsonResponse
+
+from main.models import indicator
+from scripts import transform, longToWide
 
 # Create your views here.
 
