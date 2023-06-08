@@ -4,31 +4,37 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     initial = True
 
-    dependencies = [
-    ]
+    dependencies = []
 
     operations = [
         migrations.CreateModel(
-            name='indicator',
+            name="indicator",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('Admin0_Code_ISO3', models.CharField(max_length=3)),
-                ('Admin1_Name', models.CharField(max_length=255)),
-                ('Admin1_Code', models.CharField(max_length=20)),
-                ('Admin2_Name', models.CharField(max_length=255)),
-                ('Admin2_Code', models.CharField(max_length=20)),
-                ('Admin3_Name', models.CharField(max_length=255)),
-                ('Admin3_Code', models.CharField(max_length=20)),
-                ('Admin4_Name', models.CharField(max_length=255)),
-                ('Admin4_Code', models.CharField(max_length=20)),
-                ('Lat', models.CharField(max_length=3)),
-                ('Lng', models.CharField(max_length=3)),
-                ('Record_ID', models.CharField(max_length=3)),
-                ('Record_Source', models.CharField(max_length=3)),
-                ('Theme', models.CharField(max_length=3)),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("Admin0_Code_ISO3", models.CharField(max_length=3)),
+                ("Admin1_Name", models.CharField(max_length=255)),
+                ("Admin1_Code", models.CharField(max_length=20)),
+                ("Admin2_Name", models.CharField(max_length=255)),
+                ("Admin2_Code", models.CharField(max_length=20)),
+                ("Admin3_Name", models.CharField(max_length=255)),
+                ("Admin3_Code", models.CharField(max_length=20)),
+                ("Admin4_Name", models.CharField(max_length=255)),
+                ("Admin4_Code", models.CharField(max_length=20)),
+                ("Lat", models.CharField(max_length=3)),
+                ("Lng", models.CharField(max_length=3)),
+                ("Record_ID", models.CharField(max_length=3)),
+                ("Record_Source", models.CharField(max_length=3)),
+                ("Theme", models.CharField(max_length=3)),
             ],
         ),
     ]

@@ -4,15 +4,14 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('main', '0003_alter_indicator_admin1_code_and_more'),
+        ("main", "0003_alter_indicator_admin1_code_and_more"),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='indicator',
-            name='Value',
+            model_name="indicator",
+            name="Value",
             field=models.CharField(max_length=255, null=True),
         ),
     ]

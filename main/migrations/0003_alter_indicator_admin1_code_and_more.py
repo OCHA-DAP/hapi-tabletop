@@ -4,60 +4,62 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('main', '0002_indicator_key_indicator_value_alter_indicator_lat_and_more'),
+        (
+            "main",
+            "0002_indicator_key_indicator_value_alter_indicator_lat_and_more",
+        ),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='indicator',
-            name='Admin1_Code',
+            model_name="indicator",
+            name="Admin1_Code",
             field=models.CharField(max_length=20, null=True),
         ),
         migrations.AlterField(
-            model_name='indicator',
-            name='Admin1_Name',
+            model_name="indicator",
+            name="Admin1_Name",
             field=models.CharField(max_length=255, null=True),
         ),
         migrations.AlterField(
-            model_name='indicator',
-            name='Admin2_Code',
+            model_name="indicator",
+            name="Admin2_Code",
             field=models.CharField(max_length=20, null=True),
         ),
         migrations.AlterField(
-            model_name='indicator',
-            name='Admin2_Name',
+            model_name="indicator",
+            name="Admin2_Name",
             field=models.CharField(max_length=255, null=True),
         ),
         migrations.AlterField(
-            model_name='indicator',
-            name='Admin3_Code',
+            model_name="indicator",
+            name="Admin3_Code",
             field=models.CharField(max_length=20, null=True),
         ),
         migrations.AlterField(
-            model_name='indicator',
-            name='Admin3_Name',
+            model_name="indicator",
+            name="Admin3_Name",
             field=models.CharField(max_length=255, null=True),
         ),
         migrations.AlterField(
-            model_name='indicator',
-            name='Admin4_Code',
+            model_name="indicator",
+            name="Admin4_Code",
             field=models.CharField(max_length=20, null=True),
         ),
         migrations.AlterField(
-            model_name='indicator',
-            name='Admin4_Name',
+            model_name="indicator",
+            name="Admin4_Name",
             field=models.CharField(max_length=255, null=True),
         ),
         migrations.AlterField(
-            model_name='indicator',
-            name='Lat',
+            model_name="indicator",
+            name="Lat",
             field=models.CharField(max_length=20, null=True),
         ),
         migrations.AlterField(
-            model_name='indicator',
-            name='Lng',
+            model_name="indicator",
+            name="Lng",
             field=models.CharField(max_length=20, null=True),
         ),
     ]

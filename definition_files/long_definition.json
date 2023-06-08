@@ -1,17 +1,60 @@
-{"fields":[
-	{"header":"Admin0_Code_ISO3","type":"char(3)"},
-	{"header":"Admin1_Name","type":"char(20)"},
-	{"header":"Admin1_Code","type":"char(20)"},
-	{"header":"Admin2_Name","type":"char(20)"},
-	{"header":"Admin2_Code","type":"char(20)"},
-	{"header":"Admin3_Name","type":"char(20)"},
-	{"header":"Admin3_Code","type":"char(20)"},
-	{"header":"Admin4_Name","type":"char(20)"},
-	{"header":"Admin4_Code","type":"char(20)"},
-	{"header":"Lat","type":"float"},
-	{"header":"Lng","type":"float"},
-	{"header":"Record_ID","type":"integer"},
-	{"header":"Record_Source","type":"char(20)"},
-	{"header":"Indicator","type":"char(20)"}
-]}
-
+{
+  "fields": [
+    {
+      "header": "Admin0_Code_ISO3",
+      "type": "char(3)"
+    },
+    {
+      "header": "Admin1_Name",
+      "type": "char(20)"
+    },
+    {
+      "header": "Admin1_Code",
+      "type": "char(20)"
+    },
+    {
+      "header": "Admin2_Name",
+      "type": "char(20)"
+    },
+    {
+      "header": "Admin2_Code",
+      "type": "char(20)"
+    },
+    {
+      "header": "Admin3_Name",
+      "type": "char(20)"
+    },
+    {
+      "header": "Admin3_Code",
+      "type": "char(20)"
+    },
+    {
+      "header": "Admin4_Name",
+      "type": "char(20)"
+    },
+    {
+      "header": "Admin4_Code",
+      "type": "char(20)"
+    },
+    {
+      "header": "Lat",
+      "type": "float"
+    },
+    {
+      "header": "Lng",
+      "type": "float"
+    },
+    {
+      "header": "Record_ID",
+      "type": "integer"
+    },
+    {
+      "header": "Record_Source",
+      "type": "char(20)"
+    },
+    {
+      "header": "Indicator",
+      "type": "char(20)"
+    }
+  ]
+}
