@@ -4,47 +4,46 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('main', '0001_initial'),
+        ("main", "0001_initial"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='indicator',
-            name='Key',
+            model_name="indicator",
+            name="Key",
             field=models.CharField(default=0, max_length=255),
             preserve_default=False,
         ),
         migrations.AddField(
-            model_name='indicator',
-            name='Value',
+            model_name="indicator",
+            name="Value",
             field=models.CharField(default=0, max_length=255),
             preserve_default=False,
         ),
         migrations.AlterField(
-            model_name='indicator',
-            name='Lat',
+            model_name="indicator",
+            name="Lat",
             field=models.CharField(max_length=20),
         ),
         migrations.AlterField(
-            model_name='indicator',
-            name='Lng',
+            model_name="indicator",
+            name="Lng",
             field=models.CharField(max_length=20),
         ),
         migrations.AlterField(
-            model_name='indicator',
-            name='Record_ID',
+            model_name="indicator",
+            name="Record_ID",
             field=models.IntegerField(),
         ),
         migrations.AlterField(
-            model_name='indicator',
-            name='Record_Source',
+            model_name="indicator",
+            name="Record_Source",
             field=models.CharField(max_length=255),
         ),
         migrations.AlterField(
-            model_name='indicator',
-            name='Theme',
+            model_name="indicator",
+            name="Theme",
             field=models.CharField(max_length=255),
         ),
     ]

@@ -14,4 +14,3 @@
 	{"header":"Record_Source","type":"char(20)"},
 	{"header":"Indicator","type":"char(20)"}
 ]}
-

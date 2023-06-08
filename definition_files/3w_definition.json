@@ -7,7 +7,7 @@
 		{"country":"AFG",
 		 "include":[
 			{"header":"Org_Type","type":"Char(255)"},
-			{"header":"Org_Acronym","type":"Char(255)"}	
+			{"header":"Org_Acronym","type":"Char(255)"}
 		 ],
 		 "transformations":[
 		 	{
@@ -64,7 +64,7 @@
 	 		{"header":"Org_Type","type":"Char(255)"},
 	 		{"header":"Org_Acronym","type":"Char(255)"},
 			{"header":"Reporting_or_Implementing_Org","type":"Char(255)"}
-	 		
+
 		 ],
 		 "transformations":[
 		 	{
