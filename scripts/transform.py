@@ -1,18 +1,44 @@
 import csv
 import json
+import logging
 import urllib.request
+from io import BytesIO
+
+from openpyxl import load_workbook
+
+logger = logging.getLogger(__name__)
 
 
 # loads the resource from HDX. Only works with CSV currently
 def loadResource(url):
+    try:
+        return load_csv(url)
+    except UnicodeDecodeError:
+        logger.info("Could not read csv, trying excel")
+        return load_excel(url)
+
+
+def load_csv(url):
     response = urllib.request.urlopen(url)
     lines = [line.decode("utf-8") for line in response.readlines()]
     csv_reader = csv.reader(lines)
     list_of_csv = list(csv_reader)
+    logger.info("Successfully read csv")
     return list_of_csv
 
 
-# takes in the header mapping, list of list data, and header rows and replaces headers
+def load_excel(url):
+    return [
+        list(row)
+        for row in load_workbook(
+            filename=BytesIO(urllib.request.urlopen(url).read()),
+            data_only=True,
+        ).active.iter_rows(values_only=True)
+    ]
+
+
+# takes in the header mapping, list of list data, and header rows and
+# replaces headers
 def replaceHeaders(headerRow, mappings, data):
     headerRow = headerRow - 1
     for idx, header in enumerate(data[headerRow]):

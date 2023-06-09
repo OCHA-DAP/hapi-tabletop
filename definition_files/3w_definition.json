@@ -33,6 +33,35 @@
 		 ],
 		 "dataset":"afghanistan-who-does-what-where-january-to-march-2023"
 		},
+		{"country":"MLI",
+		 "include":[
+			{"header":"Org_Type","type":"Char(255)"},
+			{"header":"Org_Acronym","type":"Char(255)"}
+		 ],
+		 "transformations":[
+		 	{
+		 		"resource": "https://data.humdata.org/dataset/d7ab89e4-bcb2-4127-be3c-5e8cf804ffd3/resource/cc1fdf79-9b6d-4e7b-bb60-c2c21d1fbcc6/download/mali_3w-presence-operationnelle-premier-trismestre-2023.xlsx",
+		 		"headerRow":1,
+		 		"dataRow":3,
+		 		"mappings":[
+		 			["Region","Admin1_Name"],
+		 			["admin1Pcod","Admin1_Code"],
+		 			["Cercle","Admin2_Name"],
+		 			["admin2Pcod","Admin2_Code"],
+		 			["Organisation Accronyme","Org_Acronym"],
+		 			["Type Organisation","Org_Type"],
+		 			["Nom Organisation","Org"],
+		 			["Cluster","Sector"]
+		 		],
+		 		"fixedCols":[
+		 			{"key":"Admin0_Code_ISO3","value":"MLI"},
+		 			{"key":"Record_Source","value":"MLI_3W"},
+		 			{"key":"Indicator","value":"3w"}
+		 		]
+		 	}
+		 ],
+		 "dataset":"afghanistan-who-does-what-where-january-to-march-2023"
+		},
 		{"country":"SOM",
 		 "include":[
 	 		{"header":"Org_Type","type":"Char(255)"},
