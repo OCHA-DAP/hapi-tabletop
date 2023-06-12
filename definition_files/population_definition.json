@@ -79,10 +79,48 @@
 		 ],
 		 "dataset":"cod-ps-afg"
 		},
-		{"country":"SOM",
-		 "include":[
-
+		{"country":"MLI",
+		"include": [],
+		 "transformations":[
+		 	{
+		 		"resource": "https://data.humdata.org/dataset/ce21c7db-d8f0-40f8-adc2-452d2d2d105c/resource/0bd515ae-613c-400f-a84c-ea203cc529be/download/mli_pop_adm1_v2.csv",
+		 		"headerRow":1,
+		 		"dataRow":2,
+		 		"mappings":[
+		 			["admin1Name_fr","Admin1_Name"],
+		 			["admin1Pcode","Admin1_Code"],
+		 			["T_TL","Population"],
+					[" F_TL ","Female_Population"],
+					[" M_TL ","Male_Population"]
+		 		],
+		 		"fixedCols":[
+		 			{"key":"Admin0_Code_ISO3","value":"MLI"},
+		 			{"key":"Record_Source","value":"MLI_Population"},
+		 			{"key":"Indicator","value":"population"}
+		 		]
+		 	},
+		 	{
+		 		"resource": "https://data.humdata.org/dataset/ce21c7db-d8f0-40f8-adc2-452d2d2d105c/resource/af0c935f-d507-4252-945c-9d1a6cc1b598/download/mli_pop_adm2_v2.csv",
+		 		"headerRow":1,
+		 		"dataRow":2,
+		 		"mappings":[
+		 			["admin2Name_fr","Admin2_Name"],
+		 			["admin2Pcode","Admin2_Code"],
+		 			["T_TL","Population"],
+					[" F_TL ","Female_Population"],
+					[" M_TL ","Male_Population"]
+		 		],
+		 		"fixedCols":[
+		 			{"key":"Admin0_Code_ISO3","value":"MLI"},
+		 			{"key":"Record_Source","value":"MLI_Population"},
+		 			{"key":"Indicator","value":"population"}
+		 		]
+		 	}
 		 ],
+		 "dataset":"cod-ps-mli"
+		},
+		{"country":"SOM",
+		 "include":[],
 		 "transformations":[
 		 	{
 		 		"resource":"https://data.humdata.org/dataset/6cac9c64-2716-4809-9e82-440839d421f6/resource/ba86a46c-f922-4f8f-a213-ad9dbd5154c8/download/som_pplp_adm1_v2.csv",
