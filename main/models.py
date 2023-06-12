@@ -15,6 +15,7 @@ class indicator(models.Model):
     Admin4_Code = models.CharField(max_length=20, null=True)
     Lat = models.CharField(max_length=20, null=True)
     Lng = models.CharField(max_length=20, null=True)
+    Date = models.DateField(null=True)
     Record_ID = models.IntegerField()
     Record_Source = models.CharField(max_length=255)
     Indicator = models.CharField(max_length=255)

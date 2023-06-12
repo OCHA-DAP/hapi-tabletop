@@ -1,0 +1,38 @@
+{"fields":{
+	"core":[
+		{"header":"Commodity","type":"char(255)"},
+		{"header":"Category","type":"char(255)"},
+		{"header":"Market","type":"char(255)"},
+		{"header":"Unit","type":"char(20)"},
+		{"header":"USDPrice","type":"float"}
+	],
+	"country-specific":[
+		{"country":"MLI",
+		 "include":[],
+		 "transformations":[
+		 	{
+		 		"resource":"https://data.humdata.org/dataset/d73f8595-0b0b-4b64-91b3-986b1cad5ae6/resource/e7489e71-2c7b-48d4-8ae7-f378b735dcba/download/wfp_food_prices_mli.csv",
+		 		"headerRow":1,
+		 		"dataRow":3,
+		 		"mappings":[
+		 			["commodity","Commodity"],
+		 			["category","Category"],
+		 			["market","Market"],
+		 			["unit","Unit"],
+		 			["usdprice","USDPrice"],
+					["admin1"], ["Admin1_Name"],
+					["admin2"], ["Admin2_Name"],
+					["latitude"], ["Lat"],
+					["longitude"], ["Lon"]
+				],
+		 		"fixedCols":[
+		 			{"key":"Admin0_Code_ISO3","value":"MLI"},
+		 			{"key":"Record_Source","value":"MLI_FoodPrices"},
+		 			{"key":"Indicator","value":"foodprices"}
+		 		]
+		 	}
+		 ],
+		 "dataset":"wfp-food-prices-for-mali"
+		}
+	]}
+}
