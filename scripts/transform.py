@@ -164,7 +164,7 @@ def transform(indicator):
             )
             dbObj = dbObj + newObj
 
-    print(dbObj)
+    print(dbObj[:10])
 
     return dbObj
 
