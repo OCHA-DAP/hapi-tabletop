@@ -15,6 +15,7 @@
 		 		"headerRow":1,
 		 		"dataRow":3,
 		 		"mappings":[
+					["date", "Date"],
 		 			["commodity","Commodity"],
 		 			["category","Category"],
 		 			["market","Market"],
@@ -42,6 +43,7 @@
 		 		"headerRow":1,
 		 		"dataRow":3,
 		 		"mappings":[
+					["date", "Date"],
 		 			["commodity","Commodity"],
 		 			["category","Category"],
 		 			["market","Market"],
@@ -69,6 +71,7 @@
 		 		"headerRow":1,
 		 		"dataRow":3,
 		 		"mappings":[
+					["date", "Date"],
 		 			["commodity","Commodity"],
 		 			["category","Category"],
 		 			["market","Market"],
@@ -96,6 +99,7 @@
 		 		"headerRow":1,
 		 		"dataRow":3,
 		 		"mappings":[
+					["date", "Date"],
 		 			["commodity","Commodity"],
 		 			["category","Category"],
 		 			["market","Market"],
