@@ -15,7 +15,6 @@
 		 		"headerRow":1,
 		 		"dataRow":3,
 		 		"mappings":[
-					["date", "Date"],
 		 			["commodity","Commodity"],
 		 			["category","Category"],
 		 			["market","Market"],
@@ -24,7 +23,8 @@
 					["admin1", "Admin1_Name"],
 					["admin2", "Admin2_Name"],
 					["latitude", "Lat"],
-					["longitude", "Lon"]
+					["longitude", "Lng"],
+					["date", "Date"]
 				],
 		 		"fixedCols":[
 		 			{"key":"Admin0_Code_ISO3","value":"AFG"},
@@ -43,7 +43,6 @@
 		 		"headerRow":1,
 		 		"dataRow":3,
 		 		"mappings":[
-					["date", "Date"],
 		 			["commodity","Commodity"],
 		 			["category","Category"],
 		 			["market","Market"],
@@ -52,7 +51,8 @@
 					["admin1", "Admin1_Name"],
 					["admin2", "Admin2_Name"],
 					["latitude", "Lat"],
-					["longitude", "Lon"]
+					["longitude", "Lng"],
+					["date", "Date"]
 				],
 		 		"fixedCols":[
 		 			{"key":"Admin0_Code_ISO3","value":"MLI"},
@@ -71,7 +71,6 @@
 		 		"headerRow":1,
 		 		"dataRow":3,
 		 		"mappings":[
-					["date", "Date"],
 		 			["commodity","Commodity"],
 		 			["category","Category"],
 		 			["market","Market"],
@@ -80,7 +79,8 @@
 					["admin1", "Admin1_Name"],
 					["admin2", "Admin2_Name"],
 					["latitude", "Lat"],
-					["longitude", "Lon"]
+					["longitude", "Lng"],
+					["date", "Date"]
 				],
 		 		"fixedCols":[
 		 			{"key":"Admin0_Code_ISO3","value":"SOM"},
@@ -99,7 +99,6 @@
 		 		"headerRow":1,
 		 		"dataRow":3,
 		 		"mappings":[
-					["date", "Date"],
 		 			["commodity","Commodity"],
 		 			["category","Category"],
 		 			["market","Market"],
@@ -108,7 +107,8 @@
 					["admin1", "Admin1_Name"],
 					["admin2", "Admin2_Name"],
 					["latitude", "Lat"],
-					["longitude", "Lon"]
+					["longitude", "Lng"],
+					["date", "Date"]
 				],
 		 		"fixedCols":[
 		 			{"key":"Admin0_Code_ISO3","value":"SSD"},

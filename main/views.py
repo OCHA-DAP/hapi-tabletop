@@ -43,7 +43,7 @@ def api(request, indicatorName):
     end_date = request.GET.get("end_date", None)
     if end_date is not None:
         end_date = datetime.strptime(end_date, "%Y-%m-%d").date()
-        dbObj = dbObj.filter(Date__gte=end_date)
+        dbObj = dbObj.filter(Date__lte=end_date)
 
     shape = request.GET.get("shape", None)
     if shape == "wide":
