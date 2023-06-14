@@ -1,7 +1,7 @@
 from django.contrib import admin
 
-from .models import indicator
+from .models import Indicator
 
 # Register your models here.
 
-admin.site.register(indicator)
+admin.site.register(Indicator)

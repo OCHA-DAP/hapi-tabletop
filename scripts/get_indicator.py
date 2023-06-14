@@ -10,15 +10,15 @@ logger = logging.getLogger(__name__)
 
 
 # loads the resource from HDX. Only works with CSV currently
-def loadResource(url):
+def _load_resource(url):
     try:
-        return load_csv(url)
+        return _load_csv(url)
     except UnicodeDecodeError:
         logger.info("Could not read csv, trying excel")
-        return load_excel(url)
+        return _load_excel(url)
 
 
-def load_csv(url):
+def _load_csv(url):
     response = urllib.request.urlopen(url)
     lines = [line.decode("utf-8") for line in response.readlines()]
     csv_reader = csv.reader(lines)
@@ -27,7 +27,7 @@ def load_csv(url):
     return list_of_csv
 
 
-def load_excel(url):
+def _load_excel(url):
     return [
         list(row)
         for row in load_workbook(
@@ -39,7 +39,7 @@ def load_excel(url):
 
 # takes in the header mapping, list of list data, and header rows and
 # replaces headers
-def replaceHeaders(headerRow, mappings, data):
+def _replace_headers(headerRow, mappings, data):
     headerRow = headerRow - 1
     for idx, header in enumerate(data[headerRow]):
         for mapping in mappings:
@@ -49,12 +49,12 @@ def replaceHeaders(headerRow, mappings, data):
 
 
 # removes rows between header and data
-def removeRows(headerRow, dataRow, data):
+def _remove_rows(headerRow, dataRow, data):
     return [data[headerRow - 1]] + data[dataRow - 1 :]
 
 
 # add new columns as defined in fixed cols part of transformation file
-def addFixedValues(fixedCols, data):
+def _add_fixed_values(fixedCols, data):
     for fixedCol in fixedCols:
         for idx, row in enumerate(data):
             if idx == 0:
@@ -65,7 +65,9 @@ def addFixedValues(fixedCols, data):
     return data
 
 
-def transformToObject(longDefinition, coreDefinition, countryDefinition, data):
+def _transform_to_object(
+    longDefinition, coreDefinition, countryDefinition, data
+):
     longLookup = {}
     for definition in longDefinition:
         key = definition["header"]
@@ -140,23 +142,23 @@ def transform(indicator):
         # load the transformation config to go from resource to DB schema
         for transformation in country["transformations"]:
             # get the resource and format
-            data = loadResource(transformation["resource"])
+            data = _load_resource(transformation["resource"])
 
             # replace the headers to standardised headers
-            data = replaceHeaders(
+            data = _replace_headers(
                 transformation["headerRow"], transformation["mappings"], data
             )
 
             # remove rows between and header and start of data
-            data = removeRows(
+            data = _remove_rows(
                 transformation["headerRow"], transformation["dataRow"], data
             )
 
             # add columns for fixed values
-            data = addFixedValues(transformation["fixedCols"], data)
+            data = _add_fixed_values(transformation["fixedCols"], data)
 
             # transform to defined DB object from definition files
-            newObj = transformToObject(
+            newObj = _transform_to_object(
                 longDefinition["fields"],
                 indicatorDefinition["fields"]["core"],
                 country["include"],

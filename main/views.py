@@ -1,25 +1,36 @@
 import csv
+import logging
 from datetime import datetime
 
 from django.http import HttpResponse, JsonResponse
 from django.shortcuts import render
 
-from main.models import indicator
-from scripts import longToWide, transform
+from main.models import Indicator, MetaData
+from scripts import get_indicator, get_metadata, longToWide
 
 # Create your views here.
+
+logger = logging.getLogger(__name__)
 
 
 def index(request):
     return HttpResponse("index")
 
 
-def transformload(request, indicatorName):
-    dbObj = transform.transform(indicatorName)
-    indicator.objects.all().filter(Indicator=indicatorName).delete()
-    for row in dbObj:
-        indicatorObj = indicator(**row)
-        indicatorObj.save()
+def transformload(request, indicator_name):
+    logger.info("Getting metadata")
+    metadata_data = get_metadata.transform(indicator_name)
+    MetaData.objects.all().filter(indicator=indicator_name).delete()
+    for row in metadata_data:
+        metadata_obj = MetaData(**row)
+        metadata_obj.save()
+
+    logger.info("Getting indicator data")
+    indicator_data = get_indicator.transform(indicator_name)
+    Indicator.objects.all().filter(Indicator=indicator_name).delete()
+    for row in indicator_data:
+        indicator_obj = Indicator(**row)
+        indicator_obj.save()
 
     return JsonResponse({"success": True}, safe=False)
 
@@ -28,8 +39,8 @@ def update(request):
     return render(request, "list.html")
 
 
-def api(request, indicatorName):
-    dbObj = indicator.objects.filter(Indicator=indicatorName)
+def api(request, indicator_name):
+    dbObj = Indicator.objects.filter(Indicator=indicator_name)
     iso3 = request.GET.get("iso3", None)
     if iso3 is not None:
         dbObj = dbObj.filter(Admin0_Code_ISO3=iso3)

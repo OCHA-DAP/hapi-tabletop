@@ -1,9 +1,20 @@
 from django.db import models
 
-# Create your models here.
+
+class MetaData(models.Model):
+    Indicator = models.CharField(max_length=255)
+    hdx_id = models.CharField(max_length=50)
+    title = models.CharField(max_length=255)
+    name = models.CharField(max_length=255)
+    notes = models.CharField(max_length=255)
+    dataset_source = models.CharField(max_length=255)
+    organization = models.CharField(max_length=255)
+    dataset_date_range = models.CharField(max_length=50)
+    last_modified = models.DateTimeField()
+    data_update_frequency = models.CharField(max_length=255)
 
 
-class indicator(models.Model):
+class Indicator(models.Model):
     Admin0_Code_ISO3 = models.CharField(max_length=3)
     Admin1_Name = models.CharField(max_length=255, null=True)
     Admin1_Code = models.CharField(max_length=20, null=True)
@@ -18,6 +29,9 @@ class indicator(models.Model):
     Date = models.DateField(null=True)
     Record_ID = models.IntegerField()
     Record_Source = models.CharField(max_length=255)
-    Indicator = models.CharField(max_length=255)
+    indicator = models.CharField(max_length=255)
     Key = models.CharField(max_length=255)
     Value = models.CharField(max_length=255, null=True)
+    MetaData = models.ForeignKey(
+        MetaData, on_delete=models.SET_NULL, null=True
+    )

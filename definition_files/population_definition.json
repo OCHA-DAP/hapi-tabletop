@@ -77,7 +77,8 @@
 		 		]
 		 	}
 		 ],
-		 "dataset":"cod-ps-afg"
+		 "dataset":"cod-ps-afg",
+		 "dataset_id":"17acb541-9431-409a-80a8-50eda7e8ebab"
 		},
 		{"country":"MLI",
 		"include": [],
@@ -117,7 +118,8 @@
 		 		]
 		 	}
 		 ],
-		 "dataset":"cod-ps-mli"
+		 "dataset":"cod-ps-mli",
+		"dataset_id":"17acb541-9431-409a-80a8-50eda7e8ebab"
 		},
 		{"country":"SOM",
 		 "include":[],
@@ -155,7 +157,8 @@
 		 		]
 		 	}
 		 ],
-		 "dataset":""
+		 "dataset":"cod-ps-som",
+			"dataset_id": "6cac9c64-2716-4809-9e82-440839d421f6"
 		},
 		{"country":"SSD",
 		 "include":[
@@ -210,7 +213,8 @@
 		 		]
 		 	}
 		 ],
-		 "dataset":""
+		 "dataset":"cod-ps-ssd",
+			"dataset_id": "5116cb9f-5db8-4f56-9766-735d88dcbbfa"
 		}
 	]}
 }
