@@ -10,6 +10,7 @@
 	{"header":"Admin4_Code","type":"char(20)"},
 	{"header":"Lat","type":"float"},
 	{"header":"Lng","type":"float"},
+	{"header":"Date","type":"date"},
 	{"header":"Record_ID","type":"integer"},
 	{"header":"Record_Source","type":"char(20)"},
 	{"header":"Indicator","type":"char(20)"}

@@ -1,4 +1,5 @@
 import csv
+from datetime import datetime
 
 from django.http import HttpResponse, JsonResponse
 from django.shortcuts import render
@@ -31,8 +32,18 @@ def api(request, indicatorName):
     dbObj = indicator.objects.filter(Indicator=indicatorName)
     iso3 = request.GET.get("iso3", None)
     if iso3 is not None:
-        print(iso3)
         dbObj = dbObj.filter(Admin0_Code_ISO3=iso3)
+
+    # Filter dates
+    start_date = request.GET.get("start_date", None)
+    if start_date is not None:
+        start_date = datetime.strptime(start_date, "%Y-%m-%d").date()
+        dbObj = dbObj.filter(Date__gte=start_date)
+
+    end_date = request.GET.get("end_date", None)
+    if end_date is not None:
+        end_date = datetime.strptime(end_date, "%Y-%m-%d").date()
+        dbObj = dbObj.filter(Date__lte=end_date)
 
     shape = request.GET.get("shape", None)
     if shape == "wide":
