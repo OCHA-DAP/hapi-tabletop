@@ -1,8 +1,8 @@
 {"fields":{
 	"core":[
-		{"header":"Population","type":"Integer"},
-		{"header":"Male_Population","type":"Integer"},
-		{"header":"Female_Population","type":"Integer"}
+		{"header":"population","type":"Integer"},
+		{"header":"male_population","type":"Integer"},
+		{"header":"female_population","type":"Integer"}
 	],
 	"country-specific":[
 		{"country":"AFG",
@@ -64,16 +64,16 @@
 		 		"headerRow":1,
 		 		"dataRow":3,
 		 		"mappings":[
-		 			["Admin1_Name","Admin1_Name"],
-		 			["Admin1_Code","Admin1_Code"],
-		 			[" T_TL ","Population"],
-		 			[" F_TL ","Female_Population"],
-		 			[" M_TL ","Male_Population"]
+		 			["Admin1_Name","admin1_name"],
+		 			["Admin1_Code","admin1_code"],
+		 			[" T_TL ","population"],
+		 			[" F_TL ","female_population"],
+		 			[" M_TL ","male_population"]
 		 		],
 		 		"fixedCols":[
-		 			{"key":"Admin0_Code_ISO3","value":"AFG"},
-		 			{"key":"Record_Source","value":"AFG_Population"},
-		 			{"key":"Indicator","value":"population"}
+		 			{"key":"admin0_code_iso3","value":"AFG"},
+		 			{"key":"record_source","value":"AFG_Population"},
+		 			{"key":"indicator_name","value":"population"}
 		 		]
 		 	}
 		 ],
@@ -88,16 +88,16 @@
 		 		"headerRow":1,
 		 		"dataRow":2,
 		 		"mappings":[
-		 			["admin1Name_fr","Admin1_Name"],
-		 			["admin1Pcode","Admin1_Code"],
-		 			["T_TL","Population"],
-					[" F_TL ","Female_Population"],
-					[" M_TL ","Male_Population"]
+		 			["admin1Name_fr","admin1_name"],
+		 			["admin1Pcode","admin1_code"],
+		 			["T_TL","population"],
+					[" F_TL ","female_population"],
+					[" M_TL ","male_population"]
 		 		],
 		 		"fixedCols":[
-		 			{"key":"Admin0_Code_ISO3","value":"MLI"},
-		 			{"key":"Record_Source","value":"MLI_Population"},
-		 			{"key":"Indicator","value":"population"}
+		 			{"key":"admin0_code_iso3","value":"MLI"},
+		 			{"key":"record_source","value":"MLI_Population"},
+		 			{"key":"indicator_name","value":"population"}
 		 		]
 		 	},
 		 	{
@@ -105,16 +105,16 @@
 		 		"headerRow":1,
 		 		"dataRow":2,
 		 		"mappings":[
-		 			["admin2Name_fr","Admin2_Name"],
-		 			["admin2Pcode","Admin2_Code"],
-		 			["T_TL","Population"],
-					[" F_TL ","Female_Population"],
-					[" M_TL ","Male_Population"]
+		 			["admin2Name_fr","admin2_name"],
+		 			["admin2Pcode","admin2_code"],
+		 			["T_TL","population"],
+					[" F_TL ","female_population"],
+					[" M_TL ","male_population"]
 		 		],
 		 		"fixedCols":[
-		 			{"key":"Admin0_Code_ISO3","value":"MLI"},
-		 			{"key":"Record_Source","value":"MLI_Population"},
-		 			{"key":"Indicator","value":"population"}
+		 			{"key":"admin0_code_iso3","value":"MLI"},
+		 			{"key":"record_source","value":"MLI_Population"},
+		 			{"key":"indicator_name","value":"population"}
 		 		]
 		 	}
 		 ],
@@ -129,14 +129,14 @@
 		 		"headerRow":1,
 		 		"dataRow":2,
 		 		"mappings":[
-		 			["admin1Name_en","Admin1_Name"],
-		 			["admin1Pcode","Admin1_Code"],
-		 			["T_TL","Population"]
+		 			["admin1Name_en","admin1_name"],
+		 			["admin1Pcode","admin1_code"],
+		 			["T_TL","population"]
 		 		],
 		 		"fixedCols":[
-		 			{"key":"Admin0_Code_ISO3","value":"SOM"},
-		 			{"key":"Record_Source","value":"SOM_Population"},
-		 			{"key":"Indicator","value":"population"}
+		 			{"key":"admin0_code_iso3","value":"SOM"},
+		 			{"key":"record_source","value":"SOM_Population"},
+		 			{"key":"indicator_name","value":"population"}
 		 		]
 		 	},
 		 	{
@@ -144,16 +144,16 @@
 		 		"headerRow":1,
 		 		"dataRow":2,
 		 		"mappings":[
-		 			["admin1Name_en","Admin1_Name"],
-		 			["admin1Pcode","Admin1_Code"],
-		 			["admin2Pcode","Admin2_Code"],
-		 			["Admin2Name_en","Admin2_Name"],
+		 			["admin1Name_en","admin1_name"],
+		 			["admin1Pcode","admin1_code"],
+		 			["admin2Pcode","admin2_code"],
+		 			["Admin2Name_en","admin2_name"],
 		 			["T_TL","Population"]
 		 		],
 		 		"fixedCols":[
-		 			{"key":"Admin0_Code_ISO3","value":"SOM"},
-		 			{"key":"Record_Source","value":"SOM_Population"},
-		 			{"key":"Indicator","value":"population"}
+		 			{"key":"admin0_code_iso3","value":"SOM"},
+		 			{"key":"record_source","value":"SOM_Population"},
+		 			{"key":"indicator_name","value":"population"}
 		 		]
 		 	}
 		 ],
@@ -181,16 +181,16 @@
 		 		"headerRow":1,
 		 		"dataRow":2,
 		 		"mappings":[
-		 			["ADM1_EN","Admin1_Name"],
-		 			["ADM1_PCODE","Admin1_Code"],
-		 			["T_TL","Population"],
-		 			["F_TL","Female_Population"],
-		 			["M_TL","Male_Population"]
+		 			["ADM1_EN","admin1_name"],
+		 			["ADM1_PCODE","admin1_code"],
+		 			["T_TL","population"],
+		 			["F_TL","female_population"],
+		 			["M_TL","male_population"]
 		 		],
 		 		"fixedCols":[
-		 			{"key":"Admin0_Code_ISO3","value":"SSD"},
-		 			{"key":"Record_Source","value":"SSD_Population1"},
-		 			{"key":"Indicator","value":"population"}
+		 			{"key":"admin0_code_iso3","value":"SSD"},
+		 			{"key":"record_source","value":"SSD_Population1"},
+		 			{"key":"indicator_name","value":"population"}
 		 		]
 		 	},
 		 	{
@@ -198,18 +198,18 @@
 		 		"headerRow":1,
 		 		"dataRow":2,
 		 		"mappings":[
-		 			["ADM1_EN","Admin1_Name"],
-		 			["ADM1_PCODE","Admin1_Code"],
-		 			["ADM2_EN","Admin2_Name"],
-		 			["ADM2_PCODE","Admin2_Code"],
-		 			["T_TL","Population"],
-		 			["F_TL","Female_Population"],
-		 			["M_TL","Male_Population"]
+		 			["ADM1_EN","admin1_name"],
+		 			["ADM1_PCODE","admin1_code"],
+		 			["ADM2_EN","admin2_name"],
+		 			["ADM2_PCODE","admin2_code"],
+		 			["T_TL","population"],
+		 			["F_TL","female_population"],
+		 			["M_TL","male_population"]
 		 		],
 		 		"fixedCols":[
-		 			{"key":"Admin0_Code_ISO3","value":"SSD"},
-		 			{"key":"Record_Source","value":"SSD_Population2"},
-		 			{"key":"Indicator","value":"population"}
+		 			{"key":"admin0_code_iso3","value":"SSD"},
+		 			{"key":"record_source","value":"SSD_Population2"},
+		 			{"key":"indicator_name","value":"population"}
 		 		]
 		 	}
 		 ],

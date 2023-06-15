@@ -27,11 +27,12 @@ def transformload(request, indicator_name):
 
     logger.info("Getting indicator data")
     indicator_data = get_indicator.transform(indicator_name)
-    Indicator.objects.all().filter(Indicator=indicator_name).delete()
+    Indicator.objects.all().filter(indicator_name=indicator_name).delete()
     for row in indicator_data:
         indicator_obj = Indicator(**row)
         indicator_obj.save()
 
+    logger.info("Success")
     return JsonResponse({"success": True}, safe=False)
 
 
@@ -40,25 +41,25 @@ def update(request):
 
 
 def api(request, indicator_name):
-    dbObj = Indicator.objects.filter(Indicator=indicator_name)
+    dbObj = Indicator.objects.filter(indicator_name=indicator_name)
     iso3 = request.GET.get("iso3", None)
     if iso3 is not None:
-        dbObj = dbObj.filter(Admin0_Code_ISO3=iso3)
+        dbObj = dbObj.filter(admin0_code_iso3=iso3)
 
     # Filter dates
     start_date = request.GET.get("start_date", None)
     if start_date is not None:
         start_date = datetime.strptime(start_date, "%Y-%m-%d").date()
-        dbObj = dbObj.filter(Date__gte=start_date)
+        dbObj = dbObj.filter(date__gte=start_date)
 
     end_date = request.GET.get("end_date", None)
     if end_date is not None:
         end_date = datetime.strptime(end_date, "%Y-%m-%d").date()
-        dbObj = dbObj.filter(Date__lte=end_date)
+        dbObj = dbObj.filter(date__lte=end_date)
 
     shape = request.GET.get("shape", None)
     if shape == "wide":
-        dbObj = dbObj.order_by("Record_ID").order_by("Admin0_Code_ISO3")
+        dbObj = dbObj.order_by("record_id").order_by("admin0_code_iso3")
         dbObjValues = list(dbObj.values())
         dbObjValues = longToWide.longToWide(dbObjValues)
     else:

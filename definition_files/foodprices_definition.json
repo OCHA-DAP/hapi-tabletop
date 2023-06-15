@@ -1,10 +1,10 @@
 {"fields":{
 	"core":[
-		{"header":"Commodity","type":"char(255)"},
-		{"header":"Category","type":"char(255)"},
-		{"header":"Market","type":"char(255)"},
-		{"header":"Unit","type":"char(20)"},
-		{"header":"USDPrice","type":"float"}
+		{"header":"commodity","type":"char(255)"},
+		{"header":"category","type":"char(255)"},
+		{"header":"market","type":"char(255)"},
+		{"header":"unit","type":"char(20)"},
+		{"header":"usd_price","type":"float"}
 	],
 	"country-specific":[
 	    {"country":"AFG",
@@ -15,25 +15,26 @@
 		 		"headerRow":1,
 		 		"dataRow":3,
 		 		"mappings":[
-		 			["commodity","Commodity"],
-		 			["category","Category"],
-		 			["market","Market"],
-		 			["unit","Unit"],
-		 			["usdprice","USDPrice"],
-					["admin1", "Admin1_Name"],
-					["admin2", "Admin2_Name"],
-					["latitude", "Lat"],
-					["longitude", "Lng"],
-					["date", "Date"]
+		 			["commodity","commodity"],
+		 			["category","category"],
+		 			["market","market"],
+		 			["unit","unit"],
+		 			["usdprice","usd_price"],
+					["admin1", "admin1_name"],
+					["admin2", "admin2_name"],
+					["latitude", "lat"],
+					["longitude", "lng"],
+					["date", "date"]
 				],
 		 		"fixedCols":[
-		 			{"key":"Admin0_Code_ISO3","value":"AFG"},
-		 			{"key":"Record_Source","value":"AFG_FoodPrices"},
-		 			{"key":"Indicator","value":"foodprices"}
+		 			{"key":"admin0_code_iso3","value":"AFG"},
+		 			{"key":"record_source","value":"AFG_FoodPrices"},
+		 			{"key":"indicator_name","value":"foodprices"}
 		 		]
 		 	}
 		 ],
-		 "dataset":"wfp-food-prices-for-afghanistan"
+		 "dataset":"wfp-food-prices-for-afghanistan",
+			"dataset_id": "8dfc1407-8165-44f2-93c3-f294172ce6c6"
 		},
 		{"country":"MLI",
 		 "include":[],
@@ -43,25 +44,26 @@
 		 		"headerRow":1,
 		 		"dataRow":3,
 		 		"mappings":[
-		 			["commodity","Commodity"],
-		 			["category","Category"],
-		 			["market","Market"],
-		 			["unit","Unit"],
-		 			["usdprice","USDPrice"],
-					["admin1", "Admin1_Name"],
-					["admin2", "Admin2_Name"],
-					["latitude", "Lat"],
-					["longitude", "Lng"],
-					["date", "Date"]
+		 			["commodity","commodity"],
+		 			["category","category"],
+		 			["market","market"],
+		 			["unit","unit"],
+		 			["usdprice","usd_price"],
+					["admin1", "admin1_name"],
+					["admin2", "admin2_name"],
+					["latitude", "lat"],
+					["longitude", "lng"],
+					["date", "date"]
 				],
 		 		"fixedCols":[
-		 			{"key":"Admin0_Code_ISO3","value":"MLI"},
-		 			{"key":"Record_Source","value":"MLI_FoodPrices"},
-		 			{"key":"Indicator","value":"foodprices"}
+		 			{"key":"admin0_code_iso3","value":"MLI"},
+		 			{"key":"record_source","value":"MLI_FoodPrices"},
+		 			{"key":"indicator_name","value":"foodprices"}
 		 		]
 		 	}
 		 ],
-		 "dataset":"wfp-food-prices-for-mali"
+		 "dataset":"wfp-food-prices-for-mali",
+			"dataset_id": "8dfc1407-8165-44f2-93c3-f294172ce6c6"
 		},
 		{"country":"SOM",
 		 "include":[],
@@ -71,25 +73,26 @@
 		 		"headerRow":1,
 		 		"dataRow":3,
 		 		"mappings":[
-		 			["commodity","Commodity"],
-		 			["category","Category"],
-		 			["market","Market"],
-		 			["unit","Unit"],
-		 			["usdprice","USDPrice"],
-					["admin1", "Admin1_Name"],
-					["admin2", "Admin2_Name"],
-					["latitude", "Lat"],
-					["longitude", "Lng"],
-					["date", "Date"]
+		 			["commodity","commodity"],
+		 			["category","category"],
+		 			["market","market"],
+		 			["unit","unit"],
+		 			["usdprice","usd_price"],
+					["admin1", "admin1_name"],
+					["admin2", "admin2_name"],
+					["latitude", "lat"],
+					["longitude", "lng"],
+					["date", "date"]
 				],
 		 		"fixedCols":[
-		 			{"key":"Admin0_Code_ISO3","value":"SOM"},
-		 			{"key":"Record_Source","value":"SOM_FoodPrices"},
-		 			{"key":"Indicator","value":"foodprices"}
+		 			{"key":"admin0_code_iso3","value":"SOM"},
+		 			{"key":"record_source","value":"SOM_FoodPrices"},
+		 			{"key":"indicator_name","value":"foodprices"}
 		 		]
 		 	}
 		 ],
-		 "dataset":"wfp-food-prices-for-somalia"
+		 "dataset":"wfp-food-prices-for-somalia",
+			"dataset_id": "8dfc1407-8165-44f2-93c3-f294172ce6c6"
 		},
 		{"country":"SSD",
 		 "include":[],
@@ -99,25 +102,26 @@
 		 		"headerRow":1,
 		 		"dataRow":3,
 		 		"mappings":[
-		 			["commodity","Commodity"],
-		 			["category","Category"],
-		 			["market","Market"],
-		 			["unit","Unit"],
-		 			["usdprice","USDPrice"],
-					["admin1", "Admin1_Name"],
-					["admin2", "Admin2_Name"],
-					["latitude", "Lat"],
-					["longitude", "Lng"],
-					["date", "Date"]
+		 			["commodity","commodity"],
+		 			["category","category"],
+		 			["market","market"],
+		 			["unit","unit"],
+		 			["usdprice","usd_price"],
+					["admin1", "admin1_name"],
+					["admin2", "admin2_name"],
+					["latitude", "lat"],
+					["longitude", "lng"],
+					["date", "date"]
 				],
 		 		"fixedCols":[
-		 			{"key":"Admin0_Code_ISO3","value":"SSD"},
-		 			{"key":"Record_Source","value":"SSD_FoodPrices"},
-		 			{"key":"Indicator","value":"foodprices"}
+		 			{"key":"admin0_code_iso3","value":"SSD"},
+		 			{"key":"record_source","value":"SSD_FoodPrices"},
+		 			{"key":"indicator_name","value":"foodprices"}
 		 		]
 		 	}
 		 ],
-		 "dataset":"wfp-food-prices-for-south-sudan"
+		 "dataset":"wfp-food-prices-for-south-sudan",
+			"dataset_id": "8dfc1407-8165-44f2-93c3-f294172ce6c6"
 		}
 	]}
 }

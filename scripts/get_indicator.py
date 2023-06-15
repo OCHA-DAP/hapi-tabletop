@@ -99,11 +99,11 @@ def _transform_to_object(
             if indicatorLookup[indicator] is not None:
                 place = indicatorLookup[indicator]
                 value = row[place]
-                dbRow["Key"] = indicator
-                dbRow["Value"] = value
+                dbRow["key"] = indicator
+                dbRow["value"] = value
             else:
-                dbRow["Key"] = indicator
-                dbRow["Value"] = None
+                dbRow["key"] = indicator
+                dbRow["value"] = None
 
             for key in longLookup:
                 if longLookup[key] is not None:
@@ -113,7 +113,7 @@ def _transform_to_object(
                 else:
                     dbRow[key] = None
 
-            dbRow["Record_ID"] = idx
+            dbRow["record_id"] = idx
 
             dbObj.append(dbRow)
 

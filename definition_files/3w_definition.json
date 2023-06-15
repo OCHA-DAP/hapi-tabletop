@@ -1,13 +1,13 @@
 {"fields":{
 	"core":[
-		{"header":"Org","type":"Char(255)"},
-		{"header":"Sector","type":"Char(255)"}
+		{"header":"org","type":"Char(255)"},
+		{"header":"sector","type":"Char(255)"}
 	],
 	"country-specific":[
 		{"country":"AFG",
 		 "include":[
-			{"header":"Org_Type","type":"Char(255)"},
-			{"header":"Org_Acronym","type":"Char(255)"}
+			{"header":"org_type","type":"Char(255)"},
+			{"header":"org_acronym","type":"Char(255)"}
 		 ],
 		 "transformations":[
 		 	{
@@ -15,28 +15,29 @@
 		 		"headerRow":1,
 		 		"dataRow":3,
 		 		"mappings":[
-		 			["PROVINCE","Admin1_Name"],
-		 			["PROV_CODE","Admin1_Code"],
-		 			["DISTRICT","Admin2_Name"],
-		 			["DIST_CODE","Admin2_Code"],
-		 			["ORG_ACRONYM","Org_Acronym"],
-		 			["ORG_TYPE","Org_Type"],
-		 			["ORG_NAME","Org"],
-		 			["CLUSTER_SECTOR_NAME","Sector"]
+		 			["PROVINCE","admin1_name"],
+		 			["PROV_CODE","admin1_code"],
+		 			["DISTRICT","admin2_name"],
+		 			["DIST_CODE","admin2_code"],
+		 			["ORG_ACRONYM","org_acronym"],
+		 			["ORG_TYPE","org_type"],
+		 			["ORG_NAME","org"],
+		 			["CLUSTER_SECTOR_NAME","sector"]
 		 		],
 		 		"fixedCols":[
-		 			{"key":"Admin0_Code_ISO3","value":"AFG"},
-		 			{"key":"Record_Source","value":"AFG_3W"},
-		 			{"key":"Indicator","value":"3w"}
+		 			{"key":"admin0_code_iso3","value":"AFG"},
+		 			{"key":"record_source","value":"AFG_3W"},
+		 			{"key":"indicator","value":"3w"}
 		 		]
 		 	}
 		 ],
-		 "dataset":"afghanistan-who-does-what-where-january-to-march-2023"
+		 "dataset":"afghanistan-who-does-what-where-january-to-march-2023",
+			"dataset_id": "f50bc211-d42f-4fcd-8291-3e4a57a0dfcf"
 		},
 		{"country":"MLI",
 		 "include":[
-			{"header":"Org_Type","type":"Char(255)"},
-			{"header":"Org_Acronym","type":"Char(255)"}
+			{"header":"org_Type","type":"Char(255)"},
+			{"header":"org_acronym","type":"Char(255)"}
 		 ],
 		 "transformations":[
 		 	{
@@ -44,28 +45,29 @@
 		 		"headerRow":1,
 		 		"dataRow":3,
 		 		"mappings":[
-		 			["Region","Admin1_Name"],
-		 			["admin1Pcod","Admin1_Code"],
-		 			["Cercle","Admin2_Name"],
-		 			["admin2Pcod","Admin2_Code"],
-		 			["Organisation Accronyme","Org_Acronym"],
-		 			["Type Organisation","Org_Type"],
-		 			["Nom Organisation","Org"],
-		 			["Cluster","Sector"]
+		 			["Region","admin1_name"],
+		 			["admin1Pcod","admin1_code"],
+		 			["Cercle","admin2_name"],
+		 			["admin2Pcod","admin2_code"],
+		 			["Organisation Accronyme","org_acronym"],
+		 			["Type Organisation","org_type"],
+		 			["Nom Organisation","org"],
+		 			["Cluster","sector"]
 		 		],
 		 		"fixedCols":[
-		 			{"key":"Admin0_Code_ISO3","value":"MLI"},
-		 			{"key":"Record_Source","value":"MLI_3W"},
-		 			{"key":"Indicator","value":"3w"}
+		 			{"key":"admin0_code_iso3","value":"MLI"},
+		 			{"key":"record_source","value":"MLI_3W"},
+		 			{"key":"indicator","value":"3w"}
 		 		]
 		 	}
 		 ],
-		 "dataset":"afghanistan-who-does-what-where-january-to-march-2023"
+		 "dataset":"afghanistan-who-does-what-where-january-to-march-2023",
+			"dataset_id": "d7ab89e4-bcb2-4127-be3c-5e8cf804ffd3"
 		},
 		{"country":"SOM",
 		 "include":[
-	 		{"header":"Org_Type","type":"Char(255)"},
-	 		{"header":"Org_Acronym","type":"Char(255)"}
+	 		{"header":"org_type","type":"Char(255)"},
+	 		{"header":"org_acronym","type":"Char(255)"}
 		 ],
 		 "transformations":[
 		 	{
@@ -73,26 +75,27 @@
 		 		"headerRow":1,
 		 		"dataRow":3,
 		 		"mappings":[
-		 			["Cluster ","Sector"],
-		 			["Org. Name","Org"],
-		 			["Org. Acronym","Org_Acronym"],
-		 			["Region ","Admin1_Name"],
-		 			["District ","Admin2_Name"]
+		 			["Cluster ","sector"],
+		 			["Org. Name","org"],
+		 			["Org. Acronym","org_acronym"],
+		 			["Region ","admin1_name"],
+		 			["District ","admin2_name"]
 		 		],
 		 		"fixedCols":[
-		 			{"key":"Admin0_Code_ISO3","value":"SOM"},
-		 			{"key":"Record_Source","value":"SOM_3W"},
-		 			{"key":"Indicator","value":"3w"}
+		 			{"key":"admin0_code_iso3","value":"SOM"},
+		 			{"key":"record_source","value":"SOM_3W"},
+		 			{"key":"indicator","value":"3w"}
 		 		]
 		 	}
 		 ],
-		 "dataset":"somalia-who-is-doing-what-and-where-3w-october-2022"
+		 "dataset":"somalia-who-is-doing-what-and-where-3w-october-2022",
+			"dataset_id": "8dfc1407-8165-44f2-93c3-f294172ce6c6"
 		},
 		{"country":"SSD",
 		 "include":[
-	 		{"header":"Org_Type","type":"Char(255)"},
-	 		{"header":"Org_Acronym","type":"Char(255)"},
-			{"header":"Reporting_or_Implementing_Org","type":"Char(255)"}
+	 		{"header":"org_type","type":"Char(255)"},
+	 		{"header":"org_acronym","type":"Char(255)"},
+			{"header":"reporting_or_implementing_org","type":"Char(255)"}
 
 		 ],
 		 "transformations":[
@@ -101,22 +104,23 @@
 		 		"headerRow":1,
 		 		"dataRow":3,
 		 		"mappings":[
-		 			["Cluster ","Sector"],
-		 			["Organization name","Org"],
-		 			["Organization","Org_Acronym"],
-		 			["State","Admin1_Name"],
-		 			["County","Admin2_Name"],
-		 			["Organization Type","Org_Type"],
-		 			["Reporting or Implementing","Reporting_or_Implementing_Org"]
+		 			["Cluster ","sector"],
+		 			["Organization name","org"],
+		 			["Organization","org_acronym"],
+		 			["State","admin1_name"],
+		 			["County","admin2_name"],
+		 			["Organization Type","org_type"],
+		 			["Reporting or Implementing","reporting_or_implementing_org"]
 		 		],
 		 		"fixedCols":[
-		 			{"key":"Admin0_Code_ISO3","value":"SSD"},
-		 			{"key":"Record_Source","value":"SSD_3W"},
-		 			{"key":"Indicator","value":"3w"}
+		 			{"key":"admin0_code_iso3","value":"SSD"},
+		 			{"key":"record_source","value":"SSD_3W"},
+		 			{"key":"indicator","value":"3w"}
 		 		]
 		 	}
 		 ],
-		 "dataset":"somalia-who-is-doing-what-and-where-3w-october-2022"
+		 "dataset":"somalia-who-is-doing-what-and-where-3w-october-2022",
+			"dataset_id": "531fe931-4b87-43e9-ae4c-a3e25a2bd388"
 		}
 	]}
 }
