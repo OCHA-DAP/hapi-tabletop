@@ -5,8 +5,8 @@ from . import views
 urlpatterns = [
     path("", views.index, name="index"),
     path("update/", views.update, name="update"),
-    path("api/indicators/<str:indicatorName>", views.api, name="api"),
+    path("api/indicators/<str:indicator_name>", views.api, name="api"),
     path(
-        "transform/<str:indicatorName>", views.transformload, name="transform"
+        "transform/<str:indicator_name>", views.transformload, name="transform"
     ),
 ]
