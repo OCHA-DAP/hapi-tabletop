@@ -14,8 +14,6 @@ def transform(indicator_name):
             f"download_metadata?format=json"
         )
         metadata_data_country = json.loads(urlopen(metadata_url).read())
-
-        # Move this to def file later
         metadata_keys = [
             "title",
             "name",
@@ -29,7 +27,6 @@ def transform(indicator_name):
         metadata_data_country = {
             key: metadata_data_country[key] for key in metadata_keys
         }
-        metadata_data_country["indicator"] = indicator_name
         metadata_data_country["hdx_id"] = dataset_id
         metadata_data_country[
             "dataset_date_range"

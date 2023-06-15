@@ -13,5 +13,5 @@
 	{"header":"Date","type":"date"},
 	{"header":"Record_ID","type":"integer"},
 	{"header":"Record_Source","type":"char(20)"},
-	{"header":"indicator","type":"char(20)"}
+	{"header":"Indicator","type":"char(20)"}
 ]}

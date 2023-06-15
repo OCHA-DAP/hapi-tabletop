@@ -2,7 +2,7 @@ from django.db import models
 
 
 class MetaData(models.Model):
-    Indicator = models.CharField(max_length=255)
+    indicator_name = models.CharField(max_length=255)
     hdx_id = models.CharField(max_length=50)
     title = models.CharField(max_length=255)
     name = models.CharField(max_length=255)
@@ -29,7 +29,7 @@ class Indicator(models.Model):
     Date = models.DateField(null=True)
     Record_ID = models.IntegerField()
     Record_Source = models.CharField(max_length=255)
-    indicator = models.CharField(max_length=255)
+    Indicator = models.CharField(max_length=255)
     Key = models.CharField(max_length=255)
     Value = models.CharField(max_length=255, null=True)
     MetaData = models.ForeignKey(

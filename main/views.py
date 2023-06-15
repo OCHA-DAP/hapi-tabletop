@@ -20,7 +20,7 @@ def index(request):
 def transformload(request, indicator_name):
     logger.info("Getting metadata")
     metadata_data = get_metadata.transform(indicator_name)
-    MetaData.objects.all().filter(indicator=indicator_name).delete()
+    MetaData.objects.all().filter(indicator_name=indicator_name).delete()
     for row in metadata_data:
         metadata_obj = MetaData(**row)
         metadata_obj.save()
