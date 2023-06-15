@@ -14,6 +14,12 @@ class MetaData(models.Model):
     data_update_frequency = models.CharField(max_length=255)
 
 
+class Country(models.Model):
+    admin0_code_iso3 = models.CharField(max_length=3)
+    name = models.CharField(max_length=255)
+    iso2 = models.CharField(max_length=2)
+
+
 class Indicator(models.Model):
     admin0_code_iso3 = models.CharField(max_length=3)
     admin1_name = models.CharField(max_length=255, null=True)
@@ -35,3 +41,4 @@ class Indicator(models.Model):
     meta_data = models.ForeignKey(
         MetaData, on_delete=models.SET_NULL, null=True
     )
+    country = models.ForeignKey(Country, on_delete=models.SET_NULL, null=True)
