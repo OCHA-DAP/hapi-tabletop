@@ -13,5 +13,7 @@
 	{"header":"date","type":"date"},
 	{"header":"record_id","type":"integer"},
 	{"header":"record_source","type":"char(20)"},
-	{"header":"indicator_name","type":"char(20)"}
+	{"header":"indicator_name","type":"char(20)"},
+	{"header":"country","type":"foreign_key"},
+	{"header":"metadata","type":"char(20)"}
 ]}

@@ -3,7 +3,7 @@ from django.db import models
 
 class MetaData(models.Model):
     indicator_name = models.CharField(max_length=255)
-    hdx_id = models.CharField(max_length=50)
+    hdx_id = models.CharField(max_length=50, unique=True)
     title = models.CharField(max_length=255)
     name = models.CharField(max_length=255)
     notes = models.CharField(max_length=255)
@@ -12,6 +12,12 @@ class MetaData(models.Model):
     dataset_date_range = models.CharField(max_length=50)
     last_modified = models.DateTimeField()
     data_update_frequency = models.CharField(max_length=255)
+
+
+class Country(models.Model):
+    admin0_code_iso3 = models.CharField(max_length=3)
+    name = models.CharField(max_length=255)
+    iso2 = models.CharField(max_length=2)
 
 
 class Indicator(models.Model):
@@ -32,6 +38,7 @@ class Indicator(models.Model):
     indicator_name = models.CharField(max_length=255)
     key = models.CharField(max_length=255)
     value = models.CharField(max_length=255, null=True)
-    meta_data = models.ForeignKey(
+    metadata = models.ForeignKey(
         MetaData, on_delete=models.SET_NULL, null=True
     )
+    country = models.ForeignKey(Country, on_delete=models.SET_NULL, null=True)

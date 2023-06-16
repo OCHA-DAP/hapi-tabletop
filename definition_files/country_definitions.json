@@ -1,6 +1,6 @@
 [
-	{"Country Name":"Afghanistan","Country Code ISO3":"AGF","Country Code ISO2":"AF"},
-	{"Country Name":"Mali","Country Code ISO3":"MLI","Country Code ISO2":"ML"},
-	{"Country Name":"Somalia","Country Code ISO3":"SOM","Country Code ISO2":"SO"},
-	{"Country Name":"South Sudan","Country Code ISO3":"SSD","Country Code ISO2":"SS"}
+	{"name":"Afghanistan","admin0_code_iso3":"AFG","iso2":"AF"},
+	{"name":"Mali","admin0_code_iso3":"MLI","iso2":"ML"},
+	{"name":"Somalia","admin0_code_iso3":"SOM","iso2":"SO"},
+	{"name":"South Sudan","admin0_code_iso3":"SSD","iso2":"SS"}
 ]

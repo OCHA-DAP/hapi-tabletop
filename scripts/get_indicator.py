@@ -6,6 +6,8 @@ from io import BytesIO
 
 from openpyxl import load_workbook
 
+from main.models import Country, MetaData
+
 logger = logging.getLogger(__name__)
 
 
@@ -62,6 +64,15 @@ def _add_fixed_values(fixedCols, data):
             else:
                 data[idx].append(fixedCol["value"])
 
+    return data
+
+
+def _add_metadata_and_country(data, iso3, hdx_id):
+    country_obj = Country.objects.all().get(admin0_code_iso3=iso3)
+    metadata_obj = MetaData.objects.all().get(hdx_id=hdx_id)
+    data[0] += ["country", "metadata"]
+    for row in data[1:]:
+        row += [country_obj, metadata_obj]
     return data
 
 
@@ -156,6 +167,12 @@ def transform(indicator):
 
             # add columns for fixed values
             data = _add_fixed_values(transformation["fixedCols"], data)
+            # add foreign keys
+            data = _add_metadata_and_country(
+                data=data,
+                iso3=country["country"],
+                hdx_id=country["dataset_id"],
+            )
 
             # transform to defined DB object from definition files
             newObj = _transform_to_object(

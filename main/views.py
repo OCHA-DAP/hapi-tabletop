@@ -1,11 +1,13 @@
 import csv
+import json
 import logging
 from datetime import datetime
 
+from django.db.utils import IntegrityError
 from django.http import HttpResponse, JsonResponse
 from django.shortcuts import render
 
-from main.models import Indicator, MetaData
+from main.models import Country, Indicator, MetaData
 from scripts import get_indicator, get_metadata, longToWide
 
 # Create your views here.
@@ -18,12 +20,23 @@ def index(request):
 
 
 def transformload(request, indicator_name):
+    logger.info("Updating countries just in case")
+    with open("definition_files/country_definitions.json") as f:
+        country_data = json.load(f)
+    Country.objects.all().delete()
+    for row in country_data:
+        country_obj = Country(**row)
+        country_obj.save()
+
     logger.info("Getting metadata")
     metadata_data = get_metadata.transform(indicator_name)
     MetaData.objects.all().filter(indicator_name=indicator_name).delete()
     for row in metadata_data:
         metadata_obj = MetaData(**row)
-        metadata_obj.save()
+        try:
+            metadata_obj.save()
+        except IntegrityError:
+            continue
 
     logger.info("Getting indicator data")
     indicator_data = get_indicator.transform(indicator_name)
