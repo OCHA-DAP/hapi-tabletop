@@ -3,6 +3,7 @@ import json
 import logging
 from datetime import datetime
 
+from django.db.utils import IntegrityError
 from django.http import HttpResponse, JsonResponse
 from django.shortcuts import render
 
@@ -32,7 +33,10 @@ def transformload(request, indicator_name):
     MetaData.objects.all().filter(indicator_name=indicator_name).delete()
     for row in metadata_data:
         metadata_obj = MetaData(**row)
-        metadata_obj.save()
+        try:
+            metadata_obj.save()
+        except IntegrityError:
+            continue
 
     logger.info("Getting indicator data")
     indicator_data = get_indicator.transform(indicator_name)
